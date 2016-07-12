@@ -11,6 +11,25 @@
 </head>
 <body>
 <section class="main">
+    <div class="search_header" id="category_header">
+        <a href="index.html" class="back" name="go_to_index"></a>
+        <div class="search">
+            <div class="text_box" name="search_box" onclick="return 1;">
+                <input id="_keyword" type="text" class="text" placeholder="搜索商品、品牌、种类" onkeydown="this.style.color='#404040'">
+            </div>
+            <input type="submit" value="" class="submit">
+        </div>
+        <a href="javascript:void(0);" class="menu"></a>
+    </div>
+    <nav class="t-nav">
+        <ul>
+            <li><a href="http://lifeijiang.oschina.io/huangjihuang" class="home">首页</a></li>
+            <li><a href="search.html" class="search">搜索</a></li>
+            <li><a href="index.html" class="category">分类</a></li>
+            <li><a href="/" class="cart">购物车</a></li>
+            <li><a href="/" class="user">我的</a></li>
+        </ul>
+    </nav>
     <div class="main_box">
         <nav class="class_list_nav">
             <div class="class_list_nav_box" id="class_list_nav_box">
@@ -1231,6 +1250,36 @@
             </div>
         </div>
     </div>
+</section>
+<section id="mix_search_div"style="display: none;">
+    <header id="bd">
+        <header class="con floatsearch">
+            <div id="component_1434612"></div>
+            <section class="mix_new_header">
+                <a href="javascript:void(0)" class="mix_back"></a>
+                <form id="index_search_form" method="get" action="search.html" target="_parent" onsubmit="return mix_submit_search();">
+                    <div class="search">
+                        <div class="text_box">
+                            <input id="keyword" name="keyword" type="text" value="" placeholder="搜索商品、品牌、种类" class="keyword text" onkeydown="this.style.color='#404040';" maxlength="70" autocomplete="off">
+                        </div>
+                        <span class="mix_submit"></span>
+                        <a href="javascript:void(0)" class="clear_input" id="clear_input" style="display: block;"></a>
+                        <input type="hidden" value="0" name="cid" id="cid">
+                        <input type="hidden" value="" name="sid">
+                    </div>
+                    <input type="submit" value="搜索" class="mix_filtrate">
+                </form>
+            </section>
+            <section class="mix_search_list"></section>
+
+            <section class="mix_recently_search">
+                <h3>搜索历史</h3>
+                <ul></ul>
+                <a href="javascript:void(0)" onclick="clearRecently()" class="clear_recently_search"><img src="images/delete_icon.png" alt="" width="15" height="15">&nbsp;清空历史记录</a>
+            </section>
+            <div class="spacer"></div>
+        </header>
+    </header>
 </section>
 <script src="script/zepto.min.js" type="text/javascript"></script>
 <script src="script/fastclick.min.js" type="text/javascript"></script>
