@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="search-page">
+<head>
+    <meta charset="UTF-8">
+    <title>黄记煌在线点餐</title>
+    <meta name="viewport"content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+    <link rel="stylesheet" href="style/style.css"/>
+</head>
+<body>
+<section class="_pre">
+    <!-- 搜索框 -->
+    <header id="head_search_box">
+        <div class="search_header">
+            <a href="index.html" class="back search_back" id='search_back'></a>
+            <div class="search">
+                <form id="search_form" method="get" action='' target="_parent" onsubmit="return submit_search();">
+                    <div class="text_box" name="list_search_text_box" onclick="return 1;">
+                        <input id="_keyword" name="search" type="text" class="text" value=""/>
+                    </div>
+                    <input type="hidden" value="0" name="">
+                    <input type="submit" value="0" class="submit" id="list_search_submit">
+                </form>
+            </div>
+            <a class="menu filtrate" name="list_go_filter">筛选</a>
+        </div>
+    </header>
+    <section id="suggest_box">
+        <div class="search_list" style="display: none;"></div>
+        <div class="shadow_box" style="display: none;"></div>
+    </section>
+    <div style="height:47px;" class="empty_div">&nbsp;</div>
+    <section cite="0" id="hot_search" class="hot_search">
+        <ul class="clearfix">
+            <iframe src="http://shop29273283.vpubao.com/index.php?c=search&search=" frameborder="0" width="100%;" height="1000px;"></iframe>
+        </ul>
+    </section>
+    <p class="search_null">请输入正确的关键字,如:"牛肉"</p>
+</section>
+<section class="_next" style="display: none">
+    <!-- 筛选 -->
+    <header>
+        <div class="new_header_2" id="filter_header">
+            <a href="javascript:;" class="back" id="list_filter_back">
+                <span>返回</span>
+            </a>
+            <h2>筛选</h2>
+        </div>
+    </header>
+    <section id="filter_content">
+        <div class="filtrate_price" name="filter_price" onclick="return 1;">
+            价格<input type="number" id="lp" value="">&sim;
+               <input type="number" id="hp" value="">元
+        </div>
+        <div class="filtrate_category" att_id="address">
+            <a href="javascript:;" class="filtrate_category_a" name="filter_region_nav">
+                收货地
+                <span class="up_down">全部展开</span>
+            </a>
+        </div>
+        <ul class="clearfix filtrate_address filtrate_list addr_item" id="filter_region_list">
+            <li class="">
+                <a href="javascript:;" cid="111" aname="北京">北京</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="112" aname="天津">天津</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="113" aname="河北">河北</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="114" aname="山西">山西</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="115" aname="内蒙古">内蒙古</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="121" aname="辽宁">辽宁</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="122" aname="吉林">吉林</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="123" aname="黑龙江">黑龙江</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="131" aname="上海">上海</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="132" aname="江苏">江苏</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="133" aname="浙江">浙江</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="134" aname="安徽">安徽</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="135" aname="福建">福建</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="136" aname="江西">江西</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="137" aname="山东">山东</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="141" aname="河南">河南</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="142" aname="湖北">湖北</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="143" aname="湖南">湖南</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="144" aname="广东">广东</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="145" aname="广西">广西</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="146" aname="海南">海南</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="150" aname="重庆">重庆</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="151" aname="四川">四川</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="152" aname="贵州">贵州</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="153" aname="云南">云南</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="154" aname="西藏">西藏</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="161" aname="陕西">陕西</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="162" aname="甘肃">甘肃</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="163" aname="青海">青海</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="164" aname="宁夏">宁夏</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="165" aname="新疆">新疆</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="171" aname="台湾">台湾</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="172" aname="香港">香港</a>
+            </li>
+            <li class="">
+                <a href="javascript:;" cid="173" aname="澳门">澳门</a>
+            </li>
+        </ul>
+        <div class="filtrate_has">
+            <h2>其他条件</h2>
+            <ul class="clearfix">
+                <li id="displaySalesPromotion"onclick="return 1;" class="">
+                    <label for="">促销</label>
+                </li>
+                <li id="displayOutlets" onclick="return 1;" class="">
+                    <label for="">尾品汇</label>
+                </li>
+                <li id="displayDDSelf" onclick="return 1;" class="">
+                    <label for="">当当自营</label>
+                </li>
+                <li id="hasStock" onclick="return 1;" class="on">
+                    <label for="">有货</label>
+                </li>
+                <li id="displayPreSell"onclick="return 1;" class="">
+                    <label for="">预售</label>
+                </li>
+                <li id="displayOverseas"onclick="return 1;" class="">
+                    <label for="">海外购</label>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="filtrate_wrap">
+        <ul class="filtrate_btn clearfix">
+            <li><a href="javascript:;" class="reset" id='clear_btn'>清空筛选条件</a></li>
+            <li><a href="javascript:;" class="submit" id='submit_btn'>确定</a></li>
+        </ul>
+    </div>
+    <script>
+        var hasFilter = 0;
+    </script>
+</section>
+<section id="mix_search_div" style="display: none;">
+    <header id="bd">
+        <header class="con floatsearch">
+            <div id="component_1434612"></div>
+            <section class="mix_new_header">
+                <a href="javascript:void(0)" class="mix_back"></a>
+                <form id="index_search_form" method="get" action="http://shop29273283.vpubao.com/index.php" onsubmit="return mix_submit_search();">
+                    <div class="search">
+                        <div class="text_box">
+                            <input id="keyword" id="shop_id" value="29273283" placeholder="在此搜索您喜爱的食物" class="keyword text" onkeydown="this.style.color='#404040';" maxlength="70" autocomplete="off">
+                        </div>
+                        <span class="mix_submit"></span>
+                        <a href="javascript:void(0)" class="clear_input" id="clear_input" style="display: block;"></a>
+                        <input  type="hidden" name="c" value="search" style="display: none">
+                        <input type="search" name="search">
+                    </div>
+                    <input type="submit" value="搜索" class="mix_filtrate">
+                </form>
+            </section>
+            <section class="mix_search_list"></section>
+            <section class="mix_recently_search">
+                <h3>搜索历史</h3>
+                <ul>
+
+                </ul>
+                <a href="javascript:void(0)" onclick="clearRecently()" class="clear_recently_search">
+                    <img src="images/delete_icon.png" alt="" width="15" height="15">
+                    &nbsp;清空历史记录
+                </a>
+            </section>
+            <div class="spacer"></div>
+        </header>
+    </header>
+</section>
+<script src="script/zepto.min.js" type="text/javascript"></script>
+<script src="script/search/fx.min.js" type="text/javascript"></script>
+<script src="script/search/fx_methods.min.js" type="text/javascript"></script>
+<script src="script/search/zepto.lazyload.min.js" type="text/javascript"></script>
+<script src="script/search/zepto_cokie.min.js" type="text/javascript"></script>
+<script src="script/common.min.js" type="text/javascript"></script>
+<script src="script/search/search.min.js" type="text/javascript"></script>
+<script src="script/search/filter.min.js" type="text/javascript"></script>
+<script src="script/search/mix_suggest.min.js" type="text/javascript"></script>
+<script>
+    var sid = "";
+    $(document).ready(function () {
+        $("img[data-original]").lazyload();
+        $.extend(m_collect, {
+            mdd_token: '',
+            search_login_url: ''
+        });
+        var fromType = location.href.indexOf("index\.php") > 0 ? 'search' : 'category';
+        $.extend(m_loadMore, {
+            p: '{"search":"0","act":"get_more","from":"' + fromType + '","search":"0","search":"' + search + '","page":1}',
+            big_pic_class: "",
+            type: 1
+        });
+        m_loadMore.init();
+        var filtrate = $(".filtrate"), submit = $(".submit,.back");
+        filtrate.bind("click", function () {
+            $("._next").css({"display": "block"});
+            $("._pre").hide();
+            window.scrollTo(0, 0);
+        });
+        submit.bind("click", function () {
+            $("._next").hide();
+            $("._pre").css({"display": "block"});
+        });
+        bizFilter.init();
+        $("#backtop").click(function () {
+            window.scrollTo(0, 0);
+        });
+    });
+</script>
+<script>
+    $(function () {
+        var sbox = $("#head_search_box"),
+                sort = $('#product_sort'),
+                related = $("#hot_search"),
+                g_list = $("#goods_list"),
+                g_m1 = "0", g_m2 = "90px";
+        var initCss = function (type) {
+            if (type == 1) {
+                sort.css({"position": "static", "width": "100%"});
+                g_list.css("margin-top", g_m1);
+            } else {
+                sort.attr("style", "");
+                g_list.css("margin-top", g_m2);
+            }
+        };
+        var m = {
+            input: $("#_keyword"),
+            rawAll: '',
+            dd: $(".text_box"),
+            cancel: $(".mix_back"),
+            rawKey: 'r',
+            main: function () {
+                this.init();
+                this.be();
+            },
+            init: function () {
+                this.rawAll = this.input.val();
+            },
+            be: function () {
+                var _this = this;
+                this.input.focus(function () {
+                    var mix_search = $("#mix_search_div");
+                    if (mix_search.length > 0) {
+                        _this.dd.trigger("click");  //for ddclick
+                        $("._pre").hide();
+                        mix_search.show();
+                        $("#keyword").val(_this.rawKey).focus();
+                        return;
+                    }
+                    var newKey = _this.input.val();
+                    if (newKey != _this.rawKey && newKey != _this.rawAll) {
+                        $(this).val(newKey);
+                    } else {
+                        $(this).val(_this.rawKey);
+                    }
+                    if ($(window).scrollTop() > 0) {
+                        initCss(1);
+                        window.scrollTo(0, 0);
+                        _this.dd.trigger("click");
+                    }
+                }).blur(function () {
+                    var newKey = _this.input.val();
+                    if (newKey === _this.rawKey) {
+                        $(this).val(_this.rawAll);
+                    } else {
+                        $(this).val(newKey);
+                    }
+                });
+                this.cancel.bind("click", function () {
+                    $("#mix_search_div").hide();
+                    $("._pre").show();
+                });
+            }
+        };
+        m.main();
+        $(window).resize(function () {
+            sbox.css("width", "100%");
+            sort.css("width", "100%");
+        });
+
+        setTimeout(function () {
+            var sboxH = sbox.height();
+            var relatedH = related.height();
+            relatedH <= 20 && related.remove();
+            var sortH = sort.height();
+            var sortStart = sort.offset().top - sboxH;
+            var showEnd = sort.offset().top;
+            var init = function () {
+                sbox.css({"position": "fixed", "top": "0"});
+                window.scrollTo(0, 0);
+            };
+            var rawScroll = 0, nowScroll = 0;
+            var upOrDown = function () {
+                var delta = 30;
+                if (nowScroll > rawScroll + delta) {
+                    return 1;
+                } else if (nowScroll < rawScroll - delta) {
+                    return 2;
+                } else {
+                    return 0;
+                }
+            };
+            var sticky = function () {
+                nowScroll = $(window).scrollTop();
+                if (nowScroll >= sortStart) {
+                    sort.css({"position": "fixed", "top": sboxH});
+                    g_list.css({"margin-top": sortH});
+                } else {
+                    sort.attr("style", "");
+                    g_list.attr("style", "");
+                }
+                if (nowScroll > showEnd + sortH) {
+                    var up = upOrDown();
+                    if (up == 1) {
+                        if (sbox.css("display") != "none") {
+                            sbox.hide();
+                            sort.hide();
+                        }
+                        rawScroll = nowScroll;
+                    } else if (up == 2) {
+                        if (sbox.css("display") == "none") {
+                            sbox.show();
+                            sort.show();
+                        }
+                        rawScroll = nowScroll;
+                    }
+                } else {
+                    if (sbox.css("display") == "none") {
+                        sbox.show();
+                        sort.show();
+                    }
+                }
+            };
+            init();
+            $(document).on("touchmove", sticky);
+            $(window).on("scroll", sticky);
+        }, 500);
+    });
+</script>
+<script src="script/search/js_tracker.js" type="text/javascript"></script>
+</body>
+</html>
